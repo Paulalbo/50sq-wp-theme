@@ -1,0 +1,150 @@
+@import ./_variables
+//navigation bar
+$small: 800px
+$medium: 1000px
+
+
+nav
+    position: absolute
+    z-index: 60
+    margin-top: 0
+    padding: 15px
+    right: 0
+
+    ul
+        list-style-type: none
+        display: flex
+        justify-content: flex-end
+        li
+            font-size: 20px
+            font-weight: bold
+            color: black
+            transition: .2s
+            letter-spacing: 3px
+            padding: 5px 10px
+            color: $square-green
+
+            &:nth-child(even):hover
+                border-bottom: 0px
+                cursor: default                     
+            &:hover
+                cursor: pointer
+        
+        a
+            text-decoration: none
+            color: $square-green
+            font-size: 16px
+            font-weight: 400
+            transition: all 0.5s ease-in-out
+            position: relative
+            text-transform: uppercase 
+            word-break: normal
+            
+
+            
+
+    @media screen and (max-width: $small)
+        position: absolute
+        margin: 0
+        padding: 0!important
+        right: 0
+        height: 75px!important
+        width: 75px!important
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: black
+        color: white
+        border-radius: 0 0 0 50px
+        z-index: 200
+        user-select: none
+
+        &:hover
+            cursor: pointer
+
+        .mobilemenu
+            display: block
+            width: 5vw
+            transition: .5s
+            position: absolute
+            z-index: 200
+            &.open
+                border-top: 0px solid #ffffff
+
+            &.closed
+                border-top: 2px solid #ffffff
+
+            &.closed::before
+                border-top: 2px solid #ffffff
+                content: ""
+                display: block
+                margin-top: 4px
+                transition: .1s
+            &.closed::after
+                border-top: 2px solid #ffffff
+                content: ""
+                display: block
+                margin-top: 4px
+                transition: .1s
+                
+            &.open::before
+                border-top: 2px solid #ffffff
+                content: ""
+                display: block
+                transform: rotate(45deg)
+                transition: .1s
+            &.open::after
+                border-top: 2px solid #ffffff
+                content: ""
+                display: block
+                transform: rotate(-45deg)
+                transition: .1s
+
+        ul
+            transition: 1s
+            display: flex
+            justify-content: center
+            flex-direction: column
+            width: 70vw
+            border-radius: 0 0 0 50px
+            background-color: #000000
+            z-index: 100
+            @media screen and (max-width: $small)
+                padding: 20px 0
+
+            li
+                color: white
+                padding: 2vh 10vw
+                text-align: left
+                height: 70px
+                @media screen and (max-width: $small)
+                    height: unset
+                    padding: 10px 10vw
+
+                a
+                    font-size: 15px
+                    padding: 5px
+                    color: white
+                    
+
+        .itemsclosed
+            right: 0
+            top: -100vh
+            position: fixed
+
+        .itemsopen
+            right: 0
+            top: 0
+            position: fixed
+
+                
+
+
+            
+
+.sticky //sticky class for sections on front age
+    position: fixed
+    margin-top: 0
+    top: 0
+    width: 100%
+    background: #0000009f

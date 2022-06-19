@@ -1,0 +1,25 @@
+#basic {
+  padding: 0vh 5vw 5vh 5vw;
+}
+
+#basic nav {
+  top: 0;
+}
+
+#basic .section {
+  padding: 15vh 0 0 0;
+}
+
+#basic .section h1 {
+  font-size: 2em;
+  padding: 15px 0;
+}
+
+#basic .section h3 {
+  padding: 10px 0 5px 0;
+}
+
+#basic .section p {
+  font-size: 1em;
+}
+/*# sourceMappingURL=basic.css.map */

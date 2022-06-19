@@ -1,0 +1,127 @@
+$small: 800px
+$medium: 1000px
+    
+    
+#contact
+    overflow: hidden
+    @media screen and (max-width: $small)
+        overflow: scroll
+    
+    section
+        margin-bottom: 0
+
+    form
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        width: 30vw
+        max-width: 1000px
+        margin: auto
+        @media screen and (max-width: $small)
+            height: auto
+    
+        input, textarea
+            width: 100%
+            min-height: 25px
+            margin: 25px 0
+            border: none
+            border-bottom: solid black 1px
+    
+            &:focus
+                outline: none
+                background-color: #ffffff
+                border-bottom: solid black 3px
+            
+        button
+            border-radius: 25px
+            background-color: black
+            color: white
+            padding: 5px 20px
+            font-size: 20px
+            float: right
+        
+            &:hover
+                cursor: pointer
+                background-color: #2e2e2e
+    
+        label
+            width: 100%
+            text-align: left
+
+    
+    @media screen and (max-width: $small)
+        form
+            width: 80vw
+
+
+    footer
+        top: unset
+        box-shadow: none
+        min-height: auto
+        padding: 20px 0
+        left: 75%
+        transform: translate(-50%, 0)
+        background-color: #ffffff00
+        width: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        @media screen and (max-width: $medium)
+            width: 100%
+
+        #footer-sidebar
+            background-color: #fff
+
+        h2
+            display: none
+
+        @media screen and (max-width: $small)
+            top: 160vh
+            padding-bottom: 10vh
+            left: unset
+            transform: unset
+            
+            
+
+    nav
+        top: 0
+        position: fixed
+
+    .right__contactheading
+        margin: 15vh auto 5vh
+        font-size: 20px
+        width: 30vw
+        max-width: 1000px
+        padding: 0
+        @media screen and (max-width: $small)
+             position: unset
+             margin-top: 0vh
+             padding: 5vh 10vw
+             width: 100%
+    
+
+    .imgmobile_contact
+        display: none
+
+        @media screen and (max-width: $small)
+            width: 100vw
+            height: 60vh
+            object-fit: cover
+            object-position: cover
+            display: unset
+
+    .only_mobile
+        display: none
+
+    
+    @media screen and (max-width: $small)
+
+        h1
+            display: none
+        
+        .only_mobile
+            position: unset
+            display: unset
+            width: fit-content
+            margin-bottom: 10vh

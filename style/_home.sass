@@ -1,0 +1,285 @@
+@import ./_variables
+@keyframes fadein
+    from
+        transform: scale(0.90)
+        opacity: 0.90
+        filter: drop-shadow(5px 5px 5px #000)
+    to
+        transform: scale(1)
+        opacity: 1
+        filter: drop-shadow(55px 49px 5px #000)
+.home
+    &-container
+        max-width: 850px
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+    &-header
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100vh
+        &__img
+            width: 50vw
+            max-width: 800px
+            transform: scale(1)
+            height: auto
+            opacity: 1
+            filter: drop-shadow(35px 29px 5px #000)
+            z-index: 10
+            position: absolute
+            @media screen and (max-width: $small)
+                width: 90vw
+
+        &::after
+            content: "sroll down"
+            color: white
+            position: absolute
+            width: 30vh
+            transform: rotate(90deg)
+            top: 85vh
+            border-bottom: 2px solid $square-green
+            z-index: -1
+    &-content
+        margin: 150px 50px 50px
+    &-teaser
+        display: flex
+        justify-content: center
+        position: relative
+        @media screen and (max-width: $small)
+            flex-direction: column
+            .home-teaser__item
+                margin-top: 50px
+                box-shadow: 0 8px 20px 0 #000
+        &__heading
+            color: $square-green
+            text-transform: uppercase
+            font-size: 25px
+            margin-top: 25px
+        &__description
+            font-size: 15px
+            color: #fff
+        &__item
+            width: 300px
+            height: 300px
+            margin: 0px 20px
+            background: rgba( 20, 20, 20, 0.9 )
+            box-shadow: 0 8px 32px 0 #000
+            border-radius: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            padding: 30px 20px
+        &__img 
+            width: 75px
+            height: auto
+        &__background
+            opacity: 0.3
+            position: absolute
+            left: 0
+            top: 50%
+            z-index: -1
+            width: 100%
+            max-width: 1500px
+            @media screen and (max-width: $small)
+                transform: rotate(90deg)
+                width: 100vh
+                left: -80%
+    &-about
+        display: flex
+        justify-content: center
+        flex-direction: column
+        margin-top: 400px
+        position: relative
+        padding-left: 35%
+        height: 550px
+        @media screen and (max-width: $small)
+            padding-left: 0
+        &__background
+            opacity: 0.65
+            width: 100%
+            position: absolute
+            left: 0
+            z-index: -1
+            filter: drop-shadow(14px -56px 67px #2b2a2a)
+            max-width: 950px
+            margin-left: -300px
+            @media screen and (max-width: $small)
+                margin-left: -100px
+                margin-top: -300px
+                width: 120vw
+                overflow: hidden
+        &__heading
+            font-size: 120px
+            font-weight: 900
+            width: 100%
+            position: relative
+            line-height: 0.9
+            margin-bottom: 30px
+            @media screen and (max-width: $small)
+                font-size: 30px
+                margin-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                width: 530px
+                height: 18px
+                background-color: $square-green
+                bottom: -25px
+                left: 0
+                @media screen and (max-width: $small)
+                    width: 200px
+                    height: 5px
+                    bottom: -15px
+        &__description
+            font-size: 30px
+            font-weight: 900
+            color: #fff
+            @media screen and (max-width: $small)
+                font-size: 20px
+                line-height: 0.85
+                margin-bottom: 15px
+
+        &__button
+            color: #fff
+            border-bottom: 3px solid $square-green
+            margin-left: auto
+    &-classes
+        position: relative
+        width: 100vw
+        z-index: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        
+        .filter-container
+            display: flex
+            justify-content: center
+            .filter
+                padding: 10px 20px
+                border-radius: 50px
+                cursor: pointer
+                transition: .3s
+                background-color: transparent
+                border: 2px solid $square-green
+                color: #fff
+                margin: 0 5px
+                text-transform: uppercase
+                font-weight: bold
+                &:hover
+                    background-color: #fff
+                    border-color: #ffffff00
+                    color: #000
+                &.active
+                    background-color: $square-green
+                    color: #fff
+
+
+        &__inner
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+        .day
+            width: 300px
+            background: rgba( 20, 20, 20, 0.9 )
+            box-shadow: 0 8px 32px 0 #000
+            border-radius: 10px
+            padding: 30px
+            margin: 20px
+            h1 
+                text-transform: uppercase
+            ul
+                list-style-type: none
+                li
+                    background: #ffffff09
+                    height: 50px
+                    border-radius: 25px
+                    margin: 5px 0
+                    display: flex
+                    align-items: center
+                    white-space: break-spaces
+                    color: #fff
+                    padding-left: 15px
+                    transition: .3s
+                    strong
+                        color: $square-green
+                        margin-right: 5px
+                    &.active
+                        color: #fff
+                        background-color: $square-green
+                        strong
+                            color: #000
+                    &.separate
+                        background: transparent
+                        color: #ffffff47
+                        text-transform: uppercase
+                        span 
+                            padding: 0 10px
+                            font-size: 15px
+                        &:before, &::after
+                            content: ""
+                            width: 80%
+                            height: 1px
+                            background-color: #ffffff47
+        &__heading-big
+            font-size: 300px
+            -webkit-text-stroke: 2px #fff
+            color: #00000000
+            opacity: 0.2
+            text-align: center
+            width: 125vw
+            margin-left: -80px
+            user-select: none
+            text-transform: uppercase
+            font-weight: 900
+            margin-top: 0vh
+            @media screen and (max-width: $small)
+                font-size: 50px
+                margin-left: 0
+                -webkit-text-stroke: 1px #fff
+
+.headline-container
+    overflow: hidden
+    display: flex
+    justify-content: center
+
+.home-grid
+    display: flex
+    flex-wrap: wrap
+    width: 950px
+    height: calc( 950px / 2 )
+    margin: 5px auto 5px -70px
+    &__column
+        width: calc( 950px / 4 )
+        &:first-child
+            width: calc( 950px / 2 )
+            .home-grid__img
+                height: calc( 950px / 2 )
+    &__img
+        height: 50%
+        width: 100%
+        object-fit: cover
+        border: 5px solid #000
+        opacity: 0.8
+        border-radius: 5px
+
+        
+#map-canvas
+    margin-left: -50px
+    width: 100vw
+    opacity: 0.95
+    position: relative
+    overflow: hidden
+    margin-top: 50px
+    iframe 
+        height: 50vh
+        width: 100vw
+        @media screen and (max-width: $small)
+            transform: scale(0.5)
+            margin-left: -50%
+            height: 100vh
+            width: 200vw
+        

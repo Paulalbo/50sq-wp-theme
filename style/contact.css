@@ -1,0 +1,180 @@
+#contact {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  #contact {
+    overflow: scroll;
+  }
+}
+
+#contact section {
+  margin-bottom: 0;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30vw;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  #contact form {
+    height: auto;
+  }
+}
+
+#contact form input, #contact form textarea {
+  width: 100%;
+  min-height: 25px;
+  margin: 25px 0;
+  border: none;
+  border-bottom: solid black 1px;
+}
+
+#contact form input:focus, #contact form textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-bottom: solid black 3px;
+}
+
+#contact form button {
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+  padding: 5px 20px;
+  font-size: 20px;
+  float: right;
+}
+
+#contact form button:hover {
+  cursor: pointer;
+  background-color: #2e2e2e;
+}
+
+#contact form label {
+  width: 100%;
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  #contact form {
+    width: 80vw;
+  }
+}
+
+#contact footer {
+  top: unset;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  min-height: auto;
+  padding: 20px 0;
+  left: 75%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-color: #ffffff00;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  #contact footer {
+    width: 100%;
+  }
+}
+
+#contact footer #footer-sidebar {
+  background-color: #fff;
+}
+
+#contact footer h2 {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  #contact footer {
+    top: 160vh;
+    padding-bottom: 10vh;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+#contact nav {
+  top: 0;
+  position: fixed;
+}
+
+#contact .right__contactheading {
+  margin: 15vh auto 5vh;
+  font-size: 20px;
+  width: 30vw;
+  max-width: 1000px;
+  padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  #contact .right__contactheading {
+    position: unset;
+    margin-top: 0vh;
+    padding: 5vh 10vw;
+    width: 100%;
+  }
+}
+
+#contact .imgmobile_contact {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  #contact .imgmobile_contact {
+    width: 100vw;
+    height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: cover;
+       object-position: cover;
+    display: unset;
+  }
+}
+
+#contact .only_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  #contact h1 {
+    display: none;
+  }
+  #contact .only_mobile {
+    position: unset;
+    display: unset;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 10vh;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

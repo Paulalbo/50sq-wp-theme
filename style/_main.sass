@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import ./_contact
+@import ./_nav
+@import ./_basic
+@import ./_home
+@import ./_variables
+@import ./_footer
+
+
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+    line-height: 1.5
+
+.only_mobile
+    display: none
+    @media screen and (max-width: $small)
+        display: unset
+        margin: 0 0 5vh 0
+        font-size: 4em
+
+p, h1, h2, a 
+    word-break: break-word
+    color: white
+
+
+body
+    overflow-x: hidden
+    overscroll-behavior-y: none
+    background: linear-gradient(51deg, black 15%, #242424 107%, #343434 100%)
+    min-height: 300vh
+
+header
+    @media screen and (max-width: $small)
+        height: 50vh
+
+    h1
+        margin-top: -10vh
+        position: absolute
+        color: white
+        border: 20px solid white
+        padding: 1vh 1vw
+        font-size: 150px
+        text-transform: lowercase
+        font-weight: 800
+        z-index: 3
+        animation: 1s ease-out 0s 1 onloadscale
+        text-align: center
+
+        @media screen and (max-width: $small)
+            font-size: 11vw
+            top:  20vh
+            position: fixed
+            font-weight: bold
+            width: auto
+            border: 2vw solid white
+            padding: 2vh 5vw
+
+
+
+
+
